@@ -1,13 +1,13 @@
 import "./App.css";
 import styled, { ThemeProvider } from "styled-components";
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
 import Hero from "./components/HeroSection";
 import Skills from "./components/Skills";
-import Education from "./components/Education";
-import Experience from "./components/Experience"
-import {BrowserRouter as Router} from "react-router-dom";
+import Experience from "./components/Experience";
+import { BrowserRouter as Router } from "react-router-dom";
+import ContactMe from "./components/ContactMe";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -18,7 +18,7 @@ const Body = styled.div`
 const Wrapper = styled.div`
   background: linear-gradient(
       38.73deg,
-      rgba(204, 0, 187, 0.15) 0%,
+      rgba(13, 97, 169) 0%,
       rgba(201, 32, 184, 0) 50%
     ),
     linear-gradient(
@@ -30,11 +30,9 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 
-
-
 function App() {
   useEffect(() => {
-    document.title = 'Ze3ck | Portfolio';
+    document.title = "Ze3ck | Portfolio";
   }, []);
   return (
     <ThemeProvider theme={darkTheme}>
@@ -45,7 +43,7 @@ function App() {
           <Wrapper>
             <Skills />
             <Experience />
-            <Education />
+            <ContactMe />
           </Wrapper>
         </Body>
       </Router>

@@ -66,7 +66,7 @@ const MobileIcon = styled.div`
     transform: translate(-100%, 50%);
     font-size: 1.5rem;
     cursor: pointer;
-    color: ${({ theme }) => theme.text_primary};
+    color: #0061a9;
 `;
 
 const NavItems = styled.ul`
@@ -89,7 +89,7 @@ const NavLink = styled.a`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: ${({ theme }) => theme.primary};
+    color: #0061a9;
   }
 `;
 
@@ -106,13 +106,13 @@ const ButtonContainer = styled.div`
 `;
 
 const GitHubButton = styled.a`
-  border: 1.8px solid ${({ theme }) => theme.primary};
+  border: 1.8px solid #0061a9;
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${({ theme }) => theme.primary};
+  color: #0061a9;
   cursor: pointer;
   padding: 0 20px;
   font-weight: 500;
@@ -120,7 +120,7 @@ const GitHubButton = styled.a`
   font-size: 16px;
   transition: all 0.6s ease-in-out;
   :hover {
-    background: ${({ theme }) => theme.primary};
+    background: #0061a9;
     color: ${({ theme }) => theme.white};
   }
   @media screen and (max-width: 768px) {
@@ -194,8 +194,7 @@ const Navbar = () => {
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
+          <NavLink href="#contactme">Contact</NavLink>
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">

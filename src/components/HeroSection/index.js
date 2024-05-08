@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-import HeroImg from "../../images/Me.jpg"
+import HeroImg from "../../images/Me.jpg";
 import HeroBgAnimation from "../../components/HeroBgAnimation";
+import HeroVideo from "../../videos/Keyboardtest.mov";
 
 const HeroContainer = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -20,6 +21,15 @@ const HeroContainer = styled.div`
   }
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+`;
+// VideoTest
+const Video = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 `;
 
 const HeroBg = styled.div`
@@ -131,7 +141,7 @@ const TextLoop = styled.div`
 `;
 
 const Span = styled.span`
-  color: ${({ theme }) => theme.primary};
+  color: #0061a9;
   cursor: pointer;
 `;
 
@@ -166,10 +176,10 @@ const ResumeButton = styled.a`
     font-size: 20px;
     font-weight: 600;
     transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: #0061a9;
+    background: linear-gradient(225deg, #0061a9; 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: -moz-linear-gradient(225deg, #0061a9; 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: -webkit-linear-gradient(225deg, #0061a9; 0%, hsla(294, 100%, 50%, 1) 100%);
     box-shadow:  20px 20px 60px #1F2634,
     -20px -20px 60px #1F2634;
     &:hover {
@@ -194,7 +204,7 @@ const Image = styled.img`
   max-width: 400px;
   max-height: 400px;
   border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.primary};
+  border: 2px solid #0061a9;
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -212,7 +222,7 @@ const Hero = () => {
     <div id="about">
       <HeroContainer>
         <HeroBg>
-            <HeroBgAnimation />
+          <HeroBgAnimation />
         </HeroBg>
         <HeroInnerContainer>
           <HeroLeftContainer>
@@ -238,7 +248,7 @@ const Hero = () => {
             </ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>
-            <Image src={HeroImg} alt="Hero"/>
+            <Image src={HeroImg} alt="Hero" />
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>
