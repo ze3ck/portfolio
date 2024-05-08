@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bast-portfolio/static/css/main.6d6bee20.css",
-    "main.js": "/bast-portfolio/static/js/main.2fffae62.js",
+    "main.js": "/bast-portfolio/static/js/main.64962867.js",
     "static/media/Keyboardtest.mov": "/bast-portfolio/static/media/Keyboardtest.14cc044b0e171d90a6e5.mov",
     "static/media/Me.jpg": "/bast-portfolio/static/media/Me.d46dd97b53a24898f9fb.jpg",
     "index.html": "/bast-portfolio/index.html",
     "main.6d6bee20.css.map": "/bast-portfolio/static/css/main.6d6bee20.css.map",
-    "main.2fffae62.js.map": "/bast-portfolio/static/js/main.2fffae62.js.map"
+    "main.64962867.js.map": "/bast-portfolio/static/js/main.64962867.js.map"
   },
   "entrypoints": [
     "static/css/main.6d6bee20.css",
-    "static/js/main.2fffae62.js"
+    "static/js/main.64962867.js"
   ]
 }
