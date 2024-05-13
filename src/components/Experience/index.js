@@ -68,7 +68,6 @@ const Experience = () => {
     <Container id="experience">
       <Wrapper>
         <Title>Experience</Title>
-        <Desc>Here are some of my experiences</Desc>
         <TimeLineSection>
           <VerticalTimeline>
             {experiences.map((experience, index) => (
@@ -107,9 +106,13 @@ const Experience = () => {
                 <p>{experience.desc}</p>
                 <br />
                 {experience.skills && (
-                  <div>
+                  <div style={{ marginLeft: "20px" }}>
+                    {" "}
+                    {/* Ajusta el margen izquierdo */}
                     <h4>Skills:</h4>
-                    <ul>
+                    <ul style={{ paddingInlineStart: "20px" }}>
+                      {" "}
+                      {/* Ajusta el margen del inicio del párrafo */}
                       {experience.skills.map((skill, index) => (
                         <li key={index}>{skill}</li>
                       ))}

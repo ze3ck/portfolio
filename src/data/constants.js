@@ -26,11 +26,6 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg",
       },
       {
-        name: "Parrot OS",
-        image:
-          "https://commons.wikimedia.org/wiki/File:Parrotsec.png#/media/File:Parrotsec.png",
-      },
-      {
         name: "Junior Cybersecurity Analyst Career Path",
         image: "https://www.vectorlogo.zone/logos/cisco/cisco-ar21.svg",
       },
@@ -65,6 +60,7 @@ export const skills = [
       },
     ],
   },
+  
   {
     title: "Backend",
     skills: [
@@ -83,12 +79,8 @@ export const skills = [
         image: "https://www.vectorlogo.zone/logos/oracle/oracle-icon.svg",
       },
       {
-        name: "PHP",
-        image: "https://www.vectorlogo.zone/logos/php/php-horizontal.svg",
-      },
-      {
         name: "SQL",
-        image: "https://www.vectorlogo.zone/logos/sql/sql-icon.svg",
+        image: "//icons.veryicon.com/png/o/application/designer-icon/sql-5.png",
       },
       {
         name: "phpMyAdmin",
@@ -103,11 +95,11 @@ export const skills = [
       {
         name: "Git",
         image:
-          "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
+          "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
       },
       {
         name: "GitHub",
-        image: "https://github.com/ze3ck/",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg",
       },
       {
         name: "YAML",
@@ -121,7 +113,7 @@ export const skills = [
       {
         name: "Adobe XD",
         image:
-          "https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667",
+          "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
       },
     ],
   },
