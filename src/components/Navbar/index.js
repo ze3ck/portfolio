@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Link as LinkR } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
-import { MdOutlineOpenInBrowser } from "react-icons/md";
 import { useTheme } from "styled-components";
 import { Bio } from "../../data/constants";
 
@@ -32,14 +31,14 @@ const NavbarContainer = styled.div`
   max-width: 1200px;
 `;
 
-const NavLogo = styled(LinkR)`
+const NavLogo = styled(Link)`
   width: 80%;
   padding: 0 6px;
   display: flex;
-  justify-self: flex-stact;
+  justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-  align.items: center;
+  align-items: center;
   @media screen and (max-width: 640px) {
     padding: 0 0px;
   }
@@ -69,9 +68,9 @@ const NavItems = styled.ul`
   @media screen and (max-width: 768px) {
     display: none;
   }
-`;  
+`;
 
-const NavLink = styled(LinkR)`
+const NavLink = styled(Link)`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -140,7 +139,7 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const MobileMenuLink = styled(NavLink)`
+const MobileMenuLink = styled(Link)`
   color: ${({ theme }) => theme.text_primary};
   margin: 8px 0;
 `;
@@ -154,17 +153,15 @@ const Navbar = () => {
       <NavbarContainer>
         <NavLogo to="/">
           <DiCssdeck size="3rem" />
-          
         </NavLogo>
         <MobileIcon onClick={() => setOpen(!open)}>
           <FaBars />
         </MobileIcon>
         <NavItems>
-          <NavLink to="#about">About</NavLink>
-          <NavLink to="#skills">Skills</NavLink>
-          <NavLink to="#experience">Experience</NavLink>
-          <NavLink to="#projects">Projects</NavLink>
-          <NavLink to="#education">Education</NavLink>
+          <NavLink smooth to="#about">About</NavLink>
+          <NavLink smooth to="#skills">Skills</NavLink>
+          <NavLink smooth to="#experience">Experience</NavLink>
+          <NavLink smooth to="#contactme">Contact</NavLink>
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">
@@ -174,20 +171,17 @@ const Navbar = () => {
       </NavbarContainer>
       {open && (
         <MobileMenu>
-          <MobileMenuLink to="#about" onClick={() => setOpen(false)}>
+          <MobileMenuLink smooth to="#about" onClick={() => setOpen(false)}>
             About
           </MobileMenuLink>
-          <MobileMenuLink to="#skills" onClick={() => setOpen(false)}>
+          <MobileMenuLink smooth to="#skills" onClick={() => setOpen(false)}>
             Skills
           </MobileMenuLink>
-          <MobileMenuLink to="#experience" onClick={() => setOpen(false)}>
+          <MobileMenuLink smooth to="#experience" onClick={() => setOpen(false)}>
             Experience
           </MobileMenuLink>
-          <MobileMenuLink to="#projects" onClick={() => setOpen(false)}>
-            Projects
-          </MobileMenuLink>
-          <MobileMenuLink to="#education" onClick={() => setOpen(false)}>
-            Education
+          <MobileMenuLink smooth to="#contactme" onClick={() => setOpen(false)}>
+            Contact
           </MobileMenuLink>
           <GitHubButton href={Bio.github} target="_blank">
             Github Profile

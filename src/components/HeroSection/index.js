@@ -29,7 +29,7 @@ const Video = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 `;
 
 const HeroBg = styled.div`
@@ -219,40 +219,42 @@ const Image = styled.img`
 
 const Hero = () => {
   return (
-    <div id="about">
-      <HeroContainer>
-        <HeroBg>
-          <HeroBgAnimation />
-        </HeroBg>
-        <HeroInnerContainer>
-          <HeroLeftContainer>
-            <Title>
-              Hi, I'm <br />
-              {Bio.name}
-            </Title>
-            <TextLoop>
-              I'm a
-              <Span>
-                <Typewriter
-                  options={{
-                    strings: Bio.roles,
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </Span>
-            </TextLoop>
-            <SubTitle>{Bio.description}</SubTitle>
-            <ResumeButton href={Bio.resume} target="_blank">
-              Check CV
-            </ResumeButton>
-          </HeroLeftContainer>
-          <HeroRightContainer>
-            <Image src={HeroImg} alt="Hero" />
-          </HeroRightContainer>
-        </HeroInnerContainer>
-      </HeroContainer>
-    </div>
+    <section id="about">
+      <div id="about">
+        <HeroContainer>
+          <HeroBg>
+            <HeroBgAnimation />
+          </HeroBg>
+          <HeroInnerContainer>
+            <HeroLeftContainer>
+              <Title>
+                Hi, I'm <br />
+                {Bio.name}
+              </Title>
+              <TextLoop>
+                I'm a
+                <Span>
+                  <Typewriter
+                    options={{
+                      strings: Bio.roles,
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                </Span>
+              </TextLoop>
+              <SubTitle>{Bio.description}</SubTitle>
+              <ResumeButton href={Bio.resume} target="_blank">
+                Check CV
+              </ResumeButton>
+            </HeroLeftContainer>
+            <HeroRightContainer>
+              <Image src={HeroImg} alt="Hero" />
+            </HeroRightContainer>
+          </HeroInnerContainer>
+        </HeroContainer>
+      </div>
+    </section>
   );
 };
 

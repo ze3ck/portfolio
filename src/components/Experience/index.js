@@ -65,66 +65,68 @@ const TimeLineSection = styled.div`
 
 const Experience = () => {
   return (
-    <Container id="experience">
-      <Wrapper>
-        <Title>Experience</Title>
-        <TimeLineSection>
-          <VerticalTimeline>
-            {experiences.map((experience, index) => (
-              <VerticalTimelineElement
-                key={index}
-                className="vertical-timeline-element--work"
-                contentStyle={{
-                  background: "rgb(23,23,33)",
-                  color: "#fff",
-                }}
-                contentArrowStyle={{
-                  borderRight: "7px solid  rgb(23,23,33)",
-                }}
-                date={experience.date}
-                iconStyle={{ background: "rgb(23,23,33)", color: "#fff" }}
-                icon={
-                  <div className="vertical-timeline-element-icon bounce-in">
-                    <img
-                      src={experience.img}
-                      alt={experience.role}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        borderRadius: "50%",
-                      }}
-                    />
-                  </div>
-                }
-              >
-                <h3 className="vertical-timeline-element-title">
-                  {experience.role}
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                  {experience.company}
-                </h4>
-                <p>{experience.desc}</p>
-                <br />
-                {experience.skills && (
-                  <div style={{ marginLeft: "20px" }}>
-                    {" "}
-                    {/* Ajusta el margen izquierdo */}
-                    <h4>Skills:</h4>
-                    <ul style={{ paddingInlineStart: "20px" }}>
+    <section id="experience">
+      <Container id="experience">
+        <Wrapper>
+          <Title>Experience</Title>
+          <TimeLineSection>
+            <VerticalTimeline>
+              {experiences.map((experience, index) => (
+                <VerticalTimelineElement
+                  key={index}
+                  className="vertical-timeline-element--work"
+                  contentStyle={{
+                    background: "rgb(23,23,33)",
+                    color: "#fff",
+                  }}
+                  contentArrowStyle={{
+                    borderRight: "7px solid  rgb(23,23,33)",
+                  }}
+                  date={experience.date}
+                  iconStyle={{ background: "rgb(23,23,33)", color: "#fff" }}
+                  icon={
+                    <div className="vertical-timeline-element-icon bounce-in">
+                      <img
+                        src={experience.img}
+                        alt={experience.role}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          borderRadius: "50%",
+                        }}
+                      />
+                    </div>
+                  }
+                >
+                  <h3 className="vertical-timeline-element-title">
+                    {experience.role}
+                  </h3>
+                  <h4 className="vertical-timeline-element-subtitle">
+                    {experience.company}
+                  </h4>
+                  <p>{experience.desc}</p>
+                  <br />
+                  {experience.skills && (
+                    <div style={{ marginLeft: "20px" }}>
                       {" "}
-                      {/* Ajusta el margen del inicio del párrafo */}
-                      {experience.skills.map((skill, index) => (
-                        <li key={index}>{skill}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </VerticalTimelineElement>
-            ))}
-          </VerticalTimeline>
-        </TimeLineSection>
-      </Wrapper>
-    </Container>
+                      {/* Ajusta el margen izquierdo */}
+                      <h4>Skills:</h4>
+                      <ul style={{ paddingInlineStart: "20px" }}>
+                        {" "}
+                        {/* Ajusta el margen del inicio del párrafo */}
+                        {experience.skills.map((skill, index) => (
+                          <li key={index}>{skill}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </VerticalTimelineElement>
+              ))}
+            </VerticalTimeline>
+          </TimeLineSection>
+        </Wrapper>
+      </Container>
+    </section>
   );
 };
 
