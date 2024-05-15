@@ -4,7 +4,6 @@ import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/Me.jpg";
 import HeroBgAnimation from "../../components/HeroBgAnimation";
-import HeroVideo from "../../videos/Keyboardtest.mov";
 
 const HeroContainer = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -21,15 +20,6 @@ const HeroContainer = styled.div`
   }
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
-`;
-// VideoTest
-const Video = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 `;
 
 const HeroBg = styled.div`

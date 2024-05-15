@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { HashLink as Link } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
 import { useTheme } from "styled-components";
@@ -31,12 +31,12 @@ const NavbarContainer = styled.div`
   max-width: 1200px;
 `;
 
-const NavLogo = styled(Link)`
+const NavLogo = styled.a`
+  cursor: pointer;
   width: 80%;
   padding: 0 6px;
   display: flex;
   justify-self: flex-start;
-  cursor: pointer;
   text-decoration: none;
   align-items: center;
   @media screen and (max-width: 640px) {
@@ -56,6 +56,7 @@ const MobileIcon = styled.div`
     font-size: 1.5rem;
     cursor: pointer;
     color: #0061a9;
+  }
 `;
 
 const NavItems = styled.ul`
@@ -70,7 +71,7 @@ const NavItems = styled.ul`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -121,12 +122,6 @@ const MobileMenu = styled.div`
   }
 `;
 
-const Span = styled.div`
-  padding: 0 4px;
-  font-weight: bold;
-  font-size: 18px;
-`;
-
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: end;
@@ -139,29 +134,45 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const MobileMenuLink = styled(Link)`
+const MobileMenuLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   margin: 8px 0;
+  cursor: pointer;
+  text-decoration: none;
 `;
+
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
+  const navigate = useNavigate();
+
+  const handleNavClick = (sectionId) => {
+    scrollToSection(sectionId);
+    navigate("/portfolio", { replace: true });
+    setOpen(false);
+  };
 
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">
+        <NavLogo onClick={() => handleNavClick("home")}>
           <DiCssdeck size="3rem" />
         </NavLogo>
         <MobileIcon onClick={() => setOpen(!open)}>
           <FaBars />
         </MobileIcon>
         <NavItems>
-          <NavLink smooth to="#about">About</NavLink>
-          <NavLink smooth to="#skills">Skills</NavLink>
-          <NavLink smooth to="#experience">Experience</NavLink>
-          <NavLink smooth to="#contactme">Contact</NavLink>
+          <NavLink onClick={() => handleNavClick("about")}>About</NavLink>
+          <NavLink onClick={() => handleNavClick("skills")}>Skills</NavLink>
+          <NavLink onClick={() => handleNavClick("experience")}>Experience</NavLink>
+          <NavLink onClick={() => handleNavClick("contactme")}>Contact</NavLink>
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">
@@ -171,16 +182,16 @@ const Navbar = () => {
       </NavbarContainer>
       {open && (
         <MobileMenu>
-          <MobileMenuLink smooth to="#about" onClick={() => setOpen(false)}>
+          <MobileMenuLink onClick={() => handleNavClick("about")}>
             About
           </MobileMenuLink>
-          <MobileMenuLink smooth to="#skills" onClick={() => setOpen(false)}>
+          <MobileMenuLink onClick={() => handleNavClick("skills")}>
             Skills
           </MobileMenuLink>
-          <MobileMenuLink smooth to="#experience" onClick={() => setOpen(false)}>
+          <MobileMenuLink onClick={() => handleNavClick("experience")}>
             Experience
           </MobileMenuLink>
-          <MobileMenuLink smooth to="#contactme" onClick={() => setOpen(false)}>
+          <MobileMenuLink onClick={() => handleNavClick("contactme")}>
             Contact
           </MobileMenuLink>
           <GitHubButton href={Bio.github} target="_blank">
