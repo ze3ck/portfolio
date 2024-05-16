@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { DiCssdeck } from "react-icons/di";
+import { GiBlackHoleBolas } from "react-icons/gi";
 import { FaBars } from "react-icons/fa";
 import { useTheme } from "styled-components";
 import { Bio } from "../../data/constants";
@@ -163,7 +163,7 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo onClick={() => handleNavClick("home")}>
-          <DiCssdeck size="3rem" />
+          <GiBlackHoleBolas size="3rem" />
         </NavLogo>
         <MobileIcon onClick={() => setOpen(!open)}>
           <FaBars />
