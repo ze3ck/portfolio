@@ -75,6 +75,11 @@ export const skills = [
           "https://www.php.net//images/logos/new-php-logo.svg",
       },
       {
+        name: "Django",
+        image:
+          "https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg",
+      },
+      {
         name: "MySQL",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
