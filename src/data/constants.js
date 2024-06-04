@@ -6,10 +6,6 @@ export const Bio = {
   github: "https://github.com/ze3ck/",
   resume:
     "https://drive.google.com/file/d/1Mf1qRocx4wjZdPNTsT7PqAVZSHjvi3GR/view?usp=sharing",
-  linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-  twitter: "https://twitter.com/RishavChanda",
-  insta: "https://www.instagram.com/rishav_chanda/",
-  facebook: "https://www.facebook.com/rishav.chanda.165/",
 };
 
 export const skills = [
