@@ -1,6 +1,6 @@
 export const Bio = {
   name: "Bastian Leyton Mardones",
-  roles: ["Software Engineer", "Cybersecurity Analyst Jr", "Programmer"],
+  roles: ["Software Engineer", "Cybersecurity Analyst Jr", "Developer"],
   description:
     "A proactive final year Software Engineering student, passionate about cybersecurity and data science, focused on every assigned task, with experience in teamwork on projects throughout the duration of the degree, always striving for excellence in every acquired skill, contribuiting my knowledge with the aim of adding value to the enviroment where I am developing.",
   github: "https://github.com/ze3ck/",
