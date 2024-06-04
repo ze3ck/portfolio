@@ -70,6 +70,11 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
       },
       {
+        name: "PHP",
+        image:
+          "https://www.php.net//images/logos/new-php-logo.svg",
+      },
+      {
         name: "MySQL",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
