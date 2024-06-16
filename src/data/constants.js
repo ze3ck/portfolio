@@ -5,7 +5,7 @@ export const Bio = {
     "A proactive final year Software Engineering student, passionate about cybersecurity and data science, focused on every assigned task, with experience in teamwork on projects throughout the duration of the degree, always striving for excellence in every acquired skill, contribuiting my knowledge with the aim of adding value to the enviroment where I am developing.",
   github: "https://github.com/ze3ck/",
   resume:
-    "https://drive.google.com/file/d/1Mf1qRocx4wjZdPNTsT7PqAVZSHjvi3GR/view?usp=sharing",
+    "https://drive.google.com/file/d/1jn_Bkp-vu7UxfAw3sUqfoEgK6AtY9Ree/view?usp=sharing",
 };
 
 export const skills = [
