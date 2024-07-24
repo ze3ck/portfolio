@@ -1,9 +1,9 @@
+import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import React from "react";
 import styled from "styled-components";
 import { experiences } from "../../data/constants";
 
@@ -66,19 +66,16 @@ const TimeLineSection = styled.div`
 const Experience = () => {
   return (
     <section id="experience">
-      <Container id="experience">
+      <Container>
         <Wrapper>
           <Title>Experience</Title>
           <TimeLineSection>
             <VerticalTimeline>
-              {experiences.map((experience, index) => (
+              {experiences.map((experience) => (
                 <VerticalTimelineElement
-                  key={index}
+                  key={experience.id}
                   className="vertical-timeline-element--work"
-                  contentStyle={{
-                    background: "rgb(23,23,33)",
-                    color: "#fff",
-                  }}
+                  contentStyle={{ background: "rgb(23,23,33)", color: "#fff" }}
                   contentArrowStyle={{
                     borderRight: "7px solid  rgb(23,23,33)",
                   }}
@@ -108,14 +105,12 @@ const Experience = () => {
                   <br />
                   {experience.skills && (
                     <div style={{ marginLeft: "20px" }}>
-                      {" "}
-                      {/* Ajusta el margen izquierdo */}
                       <h4>Skills:</h4>
                       <ul style={{ paddingInlineStart: "20px" }}>
-                        {" "}
-                        {/* Ajusta el margen del inicio del párrafo */}
-                        {experience.skills.map((skill, index) => (
-                          <li key={index}>{skill}</li>
+                        {experience.skills.map((skill, skillIndex) => (
+                          <li key={`${experience.id}-${skillIndex}`}>
+                            {skill}
+                          </li>
                         ))}
                       </ul>
                     </div>
