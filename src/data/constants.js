@@ -13,7 +13,7 @@ export const skills = [
     title: "Frontend",
     skills: [
       {
-        name: "React Js",
+        name: "React JS",
         image:
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
@@ -98,18 +98,18 @@ export const skills = [
     title: "Others",
     skills: [
       {
-        name: "Git",
+        name: "Docker",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Docker-svgrepo-com.svg/600px-Docker-svgrepo-com.svg.png?20230427111848",
       },
       {
         name: "GitHub",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/128px-Github-desktop-logo-symbol.svg.png?20200316183539",
       },
       {
         name: "YAML",
-        image: "https://www.vectorlogo.zone/logos/yaml/yaml-ar21.svg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/YAML_logo_in_SVG_format.svg/160px-YAML_logo_in_SVG_format.svg.png?20200817184036",
       },
       {
         name: "VS Code",
